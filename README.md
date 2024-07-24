@@ -4,5 +4,4 @@ Estudio de los viajes que realizan las flotas de transporte intermunicipal desde
 
 La proceso de integración de datos es mediante ETL (Extraction - Transform - Load) 
 
-![Alt text](https://viewer.diagrams.net/?tags=%7B%7D&edit=_blank&layers=1&nav=1#G16gVEgP9TdQs-fiTvyBswOrRX0GJJcoCE)
 ![MovilidadETL drawio](https://github.com/user-attachments/assets/ed3f0f33-5a1a-4b1b-a73e-2b17937b8f17)
