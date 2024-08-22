@@ -20,8 +20,8 @@ The project aims to offer valuable insights into transportation patterns and tre
 
  
 ## Requirements
-1.   -The National Vehicles Dispatch data source is: [text](https://www.datos.gov.co/Transporte/Operaci-n-de-pasajeros-y-despacho-de-veh-culos-en-/eh75-8ah6/data_preview). 
-     -Divipola (National Geopolitical Colombian Division) dataset: [text](https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios/gdxc-w37w/about_data)
+1.   -The National Vehicles Dispatch data source is: [Datos Abiertos](https://www.datos.gov.co/Transporte/Operaci-n-de-pasajeros-y-despacho-de-veh-culos-en-/eh75-8ah6/data_preview). 
+     -Divipola (National Geopolitical Colombian Division) dataset: [Datos Abierto](https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios/gdxc-w37w/about_data)
 
 2. Data manipulation: SQL Server (creation of the tables and quality check of the information) and Visual Studio 2019 (ETL creation).
 
@@ -33,7 +33,7 @@ The project is divided in three data manipulation stages: 1. upload raw informat
 ### Upload raw information
 From the official Colombian Data Repository, the dataset contents most of 20,000,000 rows of information. For this reason, the process of upload to the Relational Data Base Management System (RDBMS) through a ETL.
 
-![alt text][MovilidadSourceDataFlow]
+[alt text][MovilidadSourceDataFlow.png]
 
 ### Upload information
 Once the data is in the RDBMS, there were created 9 entities tables and relations through 
