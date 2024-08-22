@@ -19,21 +19,24 @@ The project aims to offer valuable insights into transportation patterns and tre
 - [Licencia](#licencia)
 
 
-Holaaa holaaa se borró la introducción 
-
-
 ## Requirements
-  The source of the data is: 
+1.   -The National Vehicles Dispatch data source is: [text](https://www.datos.gov.co/Transporte/Operaci-n-de-pasajeros-y-despacho-de-veh-culos-en-/eh75-8ah6/data_preview). 
+     -Divipola (National Geopolitical Colombian Division) dataset: [text](https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios/gdxc-w37w/about_data)
 
+2. Data manipulation: SQL Server (creation of the tables and quality check of the information) and Visual Studio 2019 (ETL creation).
+
+3. Data visualization: Power BI.
 
 ## Process 
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+The project is divided in three data manipulation stages: 1. upload raw information by an ETL, 2. ER model (entity design), and 3. Kimbal Model or Star Model (dimension and fact tables design). In the next sections will be explained on detail each process.   
 
-### Source
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+### Upload raw information
+From the official Colombian Data Repository, the dataset contents most of 20,000,000 rows of information. For this reason, the process of upload to the Relational Data Base Management System (RDBMS) through a ETL.
+
+![alt text][MovilidadSourceDataFlow]
 
 ### Upload information
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+Once the data is in the RDBMS, there were created 9 entities tables and relations through 
 
 ### ETL Upload information
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
@@ -52,3 +55,9 @@ The project aims to offer valuable insights into transportation patterns and tre
 Power BI file 
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
 
+
+
+[def]: image.png
+
+
+check 
