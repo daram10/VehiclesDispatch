@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34931.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MovilidadSource", "..\MovilidadSource.dtproj", "{89A87BAA-AB92-4496-A681-1BF3BE100C74}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MovilidadDWH", "DWH\MovilidadDWH.dtproj", "{9024B583-81E9-4835-BAC4-CA501658BFF7}"
+EndProject
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "MovilidadDim", "MovilidadDim\MovilidadDim.dtproj", "{24DAF78F-F625-4730-AC96-5CC1F7139999}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89A87BAA-AB92-4496-A681-1BF3BE100C74}.Development|Default.ActiveCfg = Development
+		{89A87BAA-AB92-4496-A681-1BF3BE100C74}.Development|Default.Build.0 = Development
+		{9024B583-81E9-4835-BAC4-CA501658BFF7}.Development|Default.ActiveCfg = Development
+		{9024B583-81E9-4835-BAC4-CA501658BFF7}.Development|Default.Build.0 = Development
+		{24DAF78F-F625-4730-AC96-5CC1F7139999}.Development|Default.ActiveCfg = Development
+		{24DAF78F-F625-4730-AC96-5CC1F7139999}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11C837FB-5063-41FA-AB80-5A1BF15CB5E6}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/6/2024 9:56:59 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-2F66NVO"
+  DTS:CreatorName="DESKTOP-2F66NVO\danna"
+  DTS:DTSID="{B0441F05-F507-4658-8223-CFF3C32A8CF7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{5115C13A-394A-47CB-87CA-550A8EED58BB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDim]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3DBC011A-F88B-4E02-ACA2-B3783324A1F7}"
+      DTS:ObjectName="DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDim">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-2F66NVO\BIDATAANALYST;Initial Catalog=MovilidadDim;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{3DBC011A-F88B-4E02-ACA2-B3783324A1F7}DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDim;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9916E1BB-73B9-4A0A-BCA9-0C7784D7B151}"
+      DTS:ObjectName="DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-2F66NVO\BIDATAANALYST;Initial Catalog=MovilidadDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{9916E1BB-73B9-4A0A-BCA9-0C7784D7B151}DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Migracion TipoDespacho DWH_Dim"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{15A9DC4C-E277-4986-BEE2-404FC459DD87}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Migracion TipoDespacho DWH_Dim"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimTipoDespacho]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDim]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDim]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDTipoDespacho]"
+                      cachedDataType="i4"
+                      cachedName="IDTipoDespacho"
+                      externalMetadataColumnId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDTipoDespacho]"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDTipoDespacho]" />
+                    <inputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TipoDespacho]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="TipoDespacho"
+                      externalMetadataColumnId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoDespacho]"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoDespacho]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDTipoDespacho]"
+                      dataType="i4"
+                      name="IDTipoDespacho" />
+                    <externalMetadataColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TipoDespacho]"
+                      dataType="wstr"
+                      length="8"
+                      name="TipoDespacho" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT IDTipoDespacho, TipoDespacho
+from MovilidadDWH.dbo.TipoDespacho
+EXCEPT
+SELECT IDTipoDespacho, TipoDespacho
+FROM MovilidadDim.dbo.DimTipoDespacho</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-2F66NVO\BIDATAANALYST.MovilidadDWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDTipoDespacho]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IDTipoDespacho]"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDTipoDespacho]"
+                      name="IDTipoDespacho"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoDespacho]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoDespacho]"
+                      length="8"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].Columns[TipoDespacho]"
+                      name="TipoDespacho"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IDTipoDespacho]"
+                      dataType="i4"
+                      name="IDTipoDespacho" />
+                    <externalMetadataColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TipoDespacho]"
+                      dataType="wstr"
+                      length="8"
+                      name="TipoDespacho" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IDTipoDespacho]"
+                      dataType="i4"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IDTipoDespacho]"
+                      name="IDTipoDespacho" />
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoDespacho]"
+                      dataType="wstr"
+                      length="8"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TipoDespacho]"
+                      name="TipoDespacho" />
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Migracion TipoDespacho DWH_Dim.Paths[OLE DB Source Output]"
+              endId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="250.666666666667,42.6666666666667"
+          Id="Package\Migracion TipoDespacho DWH_Dim"
+          TopLeft="69.374998966232,55.4210536747428" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Migracion TipoDespacho DWH_Dim">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source"
+          TopLeft="91.2499986402691,49.2631588219936" />
+        <NodeLayout
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination"
+          TopLeft="318.749995250255,123.000001712849" />
+        <EdgeLayout
+          Id="Package\Migracion TipoDespacho DWH_Dim.Paths[OLE DB Source Output]"
+          TopLeft="168.583331973602,91.9298254886603">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="237.499996609986,31.070176224189"
+              Start="0,0"
+              End="237.499996609986,23.570176224189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5350881120945" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5350881120945"
+                    Point2="0,15.5350881120945"
+                    Point3="4,15.5350881120945" />
+                  <mssgle:LineSegment
+                    End="233.499996609986,15.5350881120945" />
+                  <mssgle:CubicBezierSegment
+                    Point1="233.499996609986,15.5350881120945"
+                    Point2="237.499996609986,15.5350881120945"
+                    Point3="237.499996609986,19.5350881120945" />
+                  <mssgle:LineSegment
+                    End="237.499996609986,23.570176224189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migracion TipoDespacho DWH_Dim\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Migracion TipoDespacho DWH_Dim\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
