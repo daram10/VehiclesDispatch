@@ -33,7 +33,7 @@ The project is divided in three data manipulation stages: 1. upload raw informat
 ### Upload raw information
 From the official Colombian Data Repository, the dataset contents most of 20,000,000 rows of information. For this reason, the process of upload to the Relational Data Base Management System (RDBMS) through a ETL.
 
-[alt text][MovilidadSourceDataFlow.png]
+[![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
 
 ### Upload information
 Once the data is in the RDBMS, there were created 9 entities tables and relations through 
