@@ -30,13 +30,15 @@ The project aims to offer valuable insights into transportation patterns and tre
 ## Process 
 The project is divided in three data manipulation stages: 1. upload raw information by an ETL, 2. ER model (entity design), and 3. Kimbal Model or Star Model (dimension and fact tables design). In the next sections will be explained on detail each process.   
 
-### Upload raw information
+### 1. Upload raw information
 From the official Colombian Data Repository, the dataset contents most of 20,000,000 rows of information. For this reason, the process of upload to the Relational Data Base Management System (RDBMS) through a ETL.
 
 [![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
 
-### Upload information
-Once the data is in the RDBMS, there were created 9 entities tables and relations through 
+### 2. Dataware House 
+Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  ([DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). 
+
+![alt text](image.png)
 
 ### ETL Upload information
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
