@@ -38,10 +38,7 @@ From the official Colombian Data Repository, the dataset contents most of 20,000
 ### 2. Dataware House 
 Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  ([DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). 
 
-![alt text](image.png)
-
-### ETL Upload information
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/DWHModelMovilidad.png)
 
 ### DatawareHouse
     Definition of tables and theoretical information behind 
@@ -56,10 +53,3 @@ The project aims to offer valuable insights into transportation patterns and tre
 ## Visualization 
 Power BI file 
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
-
-
-
-[def]: image.png
-
-
-check 
