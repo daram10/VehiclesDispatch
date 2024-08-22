@@ -36,15 +36,13 @@ From the official Colombian Data Repository, the dataset contents most of 20,000
 [![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
 
 ### 2. Dataware House 
-Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  ([DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). 
+Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  [DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). 
 
 ![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/DWHModelMovilidad.png)
-
-### DatawareHouse
-    Definition of tables and theoretical information behind 
     
 ### ETL Data warehouse
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+With the definition of the model, the upload of the information was doing by an ETL process. For this, it was made for each entity a pipeline, and then it was join for a principal package. 
+![alt text](C:\Users\danna\OneDrive\ADV\VehiclesDispatch\DWHETLMovilidad.png)
 
 ### Kimball Model 
 why do we use this model and not others???
