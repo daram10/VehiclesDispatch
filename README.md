@@ -18,13 +18,12 @@ The project aims to offer valuable insights into transportation patterns and tre
 - [Contribución](#contribución)
 - [Licencia](#licencia)
 
-## Introduction
-Why do I make this project?
-What do I want to find? 
-What kind of conclusions do I have?
+
+Holaaa holaaa se borró la introducción 
+
 
 ## Requirements
-  What software do I need? 
+  The source of the data is: 
 
 
 ## Process 
