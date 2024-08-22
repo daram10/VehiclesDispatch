@@ -11,6 +11,13 @@ Loading: Importing the processed data into a suitable database or analysis tool 
 
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
 
+## Table of contents 
+- [Requirements](#Requirements)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+
 ## Introduction
 Why do I make this project?
 What do I want to find? 
