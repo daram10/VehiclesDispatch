@@ -13,7 +13,7 @@ The project aims to offer valuable insights into transportation patterns and tre
 
 ## Table of contents 
 - [Requirements](#Requirements)
-- [Instalación](#instalación)
+- [Process](#Process)
 - [Uso](#uso)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
@@ -35,18 +35,19 @@ From the official Colombian Data Repository, the dataset contents most of 20,000
 
 [![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
 
-### 2. Dataware House 
-Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  [DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). 
+### 2.1. Dataware House 
+Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  [DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). Those tables were normalizated to keep the integrity of the data
 
 ![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/DWHModelMovilidad.png)
     
-### ETL Data warehouse
+### 2.2. ETL Data warehouse
 With the definition of the model, the upload of the information was doing by an ETL process. For this, it was made for each entity a pipeline, and then it was join for a principal package. 
-![alt text](C:\Users\danna\OneDrive\ADV\VehiclesDispatch\DWHETLMovilidad.png)
+![!\[alt text\]](https://github.com/daram10/VehiclesDispatch/blob/main/DWHETLMovilidad.png)
 
-### Kimball Model 
-why do we use this model and not others???
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+### 3.1. Star Model (Kimball) 
+For the tables made in the Star Model 
+
+### 3.2. ELT Kimball Model 
 
 ## Visualization 
 Power BI file 
