@@ -18,7 +18,6 @@ The project aims to offer valuable insights into transportation patterns and tre
 - [Process](#process)
 - [Visualization](#visualization)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
  
@@ -70,7 +69,7 @@ The information is uploaded using an ELT process. Similar to the "ETL Data Wareh
 ![alt text](DimentionalETLMovilidad.png)
 
 ## Visualization
-The project includes a Power BI file for visualizing the data. This visualization aims to provide insights into transportation patterns and trends in Colombia. [Dashboard](https://1drv.ms/u/s!AsDUqdq9SXRAh8AaC1XVGA2jNbpF7w?e=SmzOg6)
+The project includes a Power BI file for visualizing the data. This visualization aims to provide insights into transportation patterns and trends in Colombia. [Dashboard](https://1drv.ms/u/s!AsDUqdq9SXRAh7hh-NOonI7mZXmSCw?e=L9jE0D)
 
 ## Contributing
 Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct and the process for submitting pull requests.
