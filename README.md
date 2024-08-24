@@ -41,7 +41,7 @@ The project aims to offer valuable insights into transportation patterns and tre
 ## Process
 The project is divided into three data manipulation stages:
 1. **Upload Raw Information**: Using an ETL process.
-[![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
+![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)
 2. **ER Model (Entity Design)**: Creating entities and relationships.
 3. **ETL DWH upload information**: The data is transformed to fit the entity-relationship model, ensuring consistency and integrity.
 4. **Kimball Model (Star Schema)**: Designing dimension and fact tables.
@@ -54,12 +54,16 @@ Once the data is in the RDBMS, nine entities (tables) and their relationships ar
 ![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/DWHModelMovilidad.png)
     
 ### ETL Data Warehouse
-
 The information is uploaded using an ETL process. Each entity has a pipeline, which is then joined into a principal package.
 ![!\[alt text\]](https://github.com/daram10/VehiclesDispatch/blob/main/DWHETLMovilidad.png)
 
-### Star Model (Kimball) 
-For the tables made in the Star Model 
+
+### Kimball Model (Star Schema)
+The Star Schema is designed to provide fast and easy access to data by denormalizing tables. This approach involves creating dimension tables and a fact table, which simplifies querying and improves performance.
+
+In this project, seven dimension tables, including a time dimension, and one fact table have been created. These tables are structured to facilitate efficient data retrieval and analysis.
+![Star Schema Diagram](DimentionalModelMovilidad.png)
+
 
 ### ELT Kimball Model 
 
