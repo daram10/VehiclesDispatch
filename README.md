@@ -11,43 +11,57 @@ Loading: Importing the processed data into a suitable database or analysis tool 
 
 The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
 
-## Table of contents 
-- [Requirements](#Requirements)
-- [Process](#Process)
-- [Uso](#uso)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+## Table of Contents
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Process](#process)
+- [Visualization](#visualization)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
  
 ## Requirements
-1.   -The National Vehicles Dispatch data source is: [Datos Abiertos](https://www.datos.gov.co/Transporte/Operaci-n-de-pasajeros-y-despacho-de-veh-culos-en-/eh75-8ah6/data_preview). 
-     -Divipola (National Geopolitical Colombian Division) dataset: [Datos Abierto](https://www.datos.gov.co/Mapas-Nacionales/DIVIPOLA-C-digos-municipios/gdxc-w37w/about_data)
+- The National Vehicles Dispatch data source: [Datos Abiertos](https://www.datos.gov.co/)
+- Divipola (National Geopolitical Colombian Division) dataset: [Datos Abiertos](https://www.datos.gov.co/)
+- SQL Server: For creation of tables and quality check of the information
+- Visual Studio 2019: For ETL creation
 
-2. Data manipulation: SQL Server (creation of the tables and quality check of the information) and Visual Studio 2019 (ETL creation).
+## Installation
+1. Clone the repository.
+2. Set up the SQL Server and Visual Studio 2019 as per the requirements.
+3. Install Power BI Desktop from [Power BI](https://powerbi.microsoft.com/desktop/).
 
-3. Data visualization: Power BI.
+## Usage
+1. Upload raw information from the official Colombian Data Repository. The dataset contains over 20,000,000 rows of information.
+2. Use the ETL process to upload data to the Relational Database Management System (RDBMS).
+3. Follow the steps in the `DWHMovilidadTables.sql` script to create the necessary tables and relationships.
 
-## Process 
-The project is divided in three data manipulation stages: 1. upload raw information by an ETL, 2. ER model (entity design), and 3. Kimbal Model or Star Model (dimension and fact tables design). In the next sections will be explained on detail each process.   
-
-### 1. Upload raw information
-From the official Colombian Data Repository, the dataset contents most of 20,000,000 rows of information. For this reason, the process of upload to the Relational Data Base Management System (RDBMS) through a ETL.
-
+## Process
+The project is divided into three data manipulation stages:
+1. **Upload Raw Information**: Using an ETL process.
 [![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/MovilidadSourceDataFlow.png)]
+2. **ER Model (Entity Design)**: Creating entities and relationships.
+3. **ETL DWH upload information**: The data is transformed to fit the entity-relationship model, ensuring consistency and integrity.
+4. **Kimball Model (Star Schema)**: Designing dimension and fact tables.
+5. **ETL Kimball Model upload information**: The data is transformed into a star schema, organizing it into dimension and fact tables for efficient querying.
 
-### 2.1. Dataware House 
-Once the data is in the RDBMS, for this particular model, there were created 9 entities (tables) and relations in the DataWare House model through the document  [DWHMovilidadTables](https://vscode.dev/github/daram10/VehiclesDispatch/blob/main/DWHMovilidadTables.sql). Those tables were normalizated to keep the integrity of the data
+
+### Dataware House (ER Model)
+Once the data is in the RDBMS, nine entities (tables) and their relationships are created in the Data Warehouse model. These tables are normalized to maintain data integrity.
 
 ![alt text](https://github.com/daram10/VehiclesDispatch/blob/main/DWHModelMovilidad.png)
     
-### 2.2. ETL Data warehouse
-With the definition of the model, the upload of the information was doing by an ETL process. For this, it was made for each entity a pipeline, and then it was join for a principal package. 
+### ETL Data Warehouse
+
+The information is uploaded using an ETL process. Each entity has a pipeline, which is then joined into a principal package.
 ![!\[alt text\]](https://github.com/daram10/VehiclesDispatch/blob/main/DWHETLMovilidad.png)
 
-### 3.1. Star Model (Kimball) 
+### Star Model (Kimball) 
 For the tables made in the Star Model 
 
-### 3.2. ELT Kimball Model 
+### ELT Kimball Model 
 
 ## Visualization 
 Power BI file 
