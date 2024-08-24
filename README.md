@@ -69,6 +69,14 @@ In this project, seven dimension tables, including a time dimension, and one fac
 The information is uploaded using an ELT process. Similar to the "ETL Data Warehouse" process, a pipeline was created for each dimension and fact table. These pipelines were then combined into the main package.
 ![alt text](DimentionalETLMovilidad.png)
 
-## Visualization 
-Power BI file 
-The project aims to offer valuable insights into transportation patterns and trends in Colombia, which can inform decision-making and improve transportation planning and services.
+## Visualization
+The project includes a Power BI file for visualizing the data. This visualization aims to provide insights into transportation patterns and trends in Colombia.
+
+## Contributing
+Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details on the code of conduct and the process for submitting pull requests.
+
+## Contact
+For any questions or suggestions, please contact:
+- **Name**: Daram10
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **GitHub**: [daram10](https://github.com/daram10)
