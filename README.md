@@ -77,6 +77,4 @@ Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) fo
 
 ## Contact
 For any questions or suggestions, please contact:
-- **Name**: Daram10
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
 - **GitHub**: [daram10](https://github.com/daram10)
