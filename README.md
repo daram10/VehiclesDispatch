@@ -65,7 +65,9 @@ In this project, seven dimension tables, including a time dimension, and one fac
 ![Star Schema Diagram](DimentionalModelMovilidad.png)
 
 
-### ELT Kimball Model 
+### ELT Kimball Model
+The information is uploaded using an ELT process. Similar to the "ETL Data Warehouse" process, a pipeline was created for each dimension and fact table. These pipelines were then combined into the main package.
+![alt text](DimentionalETLMovilidad.png)
 
 ## Visualization 
 Power BI file 
